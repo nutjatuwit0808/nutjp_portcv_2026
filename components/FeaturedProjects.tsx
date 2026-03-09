@@ -6,8 +6,9 @@ import { ChevronRight } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 
 const PROJECT_KEYS = [
-  { key: "locable", tech: ["k6", ".geojson", "Performance", "Geospatial"] },
-  { key: "promptx", tech: ["React.js", "TypeScript", "AI Integration"] },
+  { key: "locable", tech: ["k6", ".geojson", "Performance", "Geospatial", "Vector Tiles"] },
+  { key: "promptx", tech: ["React.js", "TypeScript", "AI", "Oneweb", "No-Code"] },
+  { key: "zero", tech: ["React.js", "TypeScript", "Oneweb", "Low-Code", "UI Kit"] },
 ] as const;
 
 export function FeaturedProjects() {

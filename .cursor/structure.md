@@ -19,6 +19,6 @@ components/
 lib/
 ├── scroll-utils.ts     # ScrollSpy logic, smooth scroll
 public/
-├── ResumeJatuwit2026.pdf  # Copy from external path
+├── resume_jatuwit_2026.pdf  # Copy from external path
 ├── profile.jpg         # Placeholder - user to add
 ```

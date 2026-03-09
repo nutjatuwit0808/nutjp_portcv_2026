@@ -11,7 +11,7 @@
   },
   "hero": {
     "greeting": "สวัสดีครับ ผม",
-    "name": "Jatuwit",
+    "name": "จตุวิทย์ พิทักษ์ด่านสกุล (นัท)",
     "tagline": "Senior Full Stack Developer",
     "subtitle": "ประสบการณ์ 7 ปี ในการออกแบบแพลตฟอร์มที่แข็งแกร่ง Geospatial Systems และบูรณาการโซลูชัน AI",
     "cta": {
@@ -29,10 +29,12 @@
   "skills": {
     "title": "ทักษะเทคนิค",
     "programming": "ภาษาการเขียนโปรแกรม",
-    "frontend": "Frontend Technologies",
+    "frontend": "Frontend & Data Visualization",
     "backend": "Backend & Architecture",
+    "aiData": "AI & Data Engineering",
     "databases": "Databases & AI Data",
-    "cloudDevOps": "Cloud, DevOps & Security",
+    "cloudDevOps": "DevOps & CI/CD",
+    "integration": "Integration & Services",
     "specialized": "ทักษะเฉพาะทางและเครื่องมือ"
   },
   "caseStudies": {
@@ -47,13 +49,17 @@
     "liveDemo": "Live Demo",
     "githubRepo": "GitHub Repo",
     "items": {
+      "zero": {
+        "title": "แพลตฟอร์ม Lowcode พร้อม Custom Layout และ UI Kit (Zero)",
+        "description": "แพลตฟอร์ม Lowcode ที่มี custom layout engine, config styles ได้ และ UI kit สำหรับ reuse component — generate แอปบน Oneweb นำหน้าสถาปัตยกรรม frontend และออกแบบ layout schema พร้อม validation pipeline"
+      },
       "locable": {
-        "title": "Performance Optimization (Locable)",
-        "description": "ลดเวลา API response ลง 85% (จาก 8,000ms เหลือ 1,200ms) ด้วย k6 load testing และ refactor data-fetching logic เพื่อเสิร์ฟ geospatial points โดยตรงผ่านไฟล์ .geojson"
+        "title": "GIS Map Platform & Performance Optimization (Locable)",
+        "description": "แพลตฟอร์ม GIS แบบ No-code บน Mapbox — custom map layers, widget builder (keystat, filter, search, report), publish เป็น URL หรือ npm ลด API response time 85% (8,000ms → 1,200ms) ด้วย k6 load testing, .geojson pre-processing และ Redis caching"
       },
       "promptx": {
-        "title": "AI-Driven No-Code Platform (PromptX & Zero)",
-        "description": "นำหน้าสถาปัตยกรรม frontend สำหรับแพลตฟอร์ม proprietary รวมถึง Zero (No-code) และ PromptX (AI-driven interface) ใช้ React.js และ TypeScript สร้าง UI ที่ scale ได้และมีปฏิสัมพันธ์สูง"
+        "title": "Prompt-to-App No-Code Platform (PromptX)",
+        "description": "แพลตฟอร์ม No-code ที่ใช้ prompt ระบุโปรเจค (ประเภท, UI, theme) แล้ว generate แอปบน Oneweb นำหน้าวางแผน frontend และ mentor น้อง 2 คน"
       }
     }
   },

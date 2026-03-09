@@ -11,7 +11,7 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Jatuwit",
+    "name": "Jatuwit Pitukdansakul (Nut)",
     "tagline": "Senior Full Stack Developer",
     "subtitle": "7 years of experience architecting robust platforms, geospatial systems, and AI solutions.",
     "cta": {
@@ -29,10 +29,12 @@
   "skills": {
     "title": "Technical Skills",
     "programming": "Programming Languages",
-    "frontend": "Frontend Technologies",
+    "frontend": "Frontend & Data Visualization",
     "backend": "Backend & Architecture",
+    "aiData": "AI & Data Engineering",
     "databases": "Databases & AI Data",
-    "cloudDevOps": "Cloud, DevOps & Security",
+    "cloudDevOps": "DevOps & CI/CD",
+    "integration": "Integration & Services",
     "specialized": "Specialized Skills & Tools"
   },
   "caseStudies": {
@@ -47,13 +49,17 @@
     "liveDemo": "Live Demo",
     "githubRepo": "GitHub Repo",
     "items": {
+      "zero": {
+        "title": "Lowcode Platform with Custom Layout & UI Kit (Zero)",
+        "description": "Lowcode platform with custom layout engine, configurable styles, and reusable UI kit—generates apps on Oneweb. Led frontend architecture and designed layout schema with validation pipeline."
+      },
       "locable": {
-        "title": "Performance Optimization (Locable)",
-        "description": "Reduced API response time by 85% (from 8,000ms to 1,200ms) using k6 load testing and refactoring data-fetching logic to serve geospatial points directly via .geojson files."
+        "title": "GIS Map Platform & Performance Optimization (Locable)",
+        "description": "No-code GIS platform built on Mapbox—custom map layers, widget builder (keystat, filter, search, report), publish as URL or npm. Cut API response time 85% (8,000ms → 1,200ms) via k6 load testing, .geojson pre-processing, and Redis caching."
       },
       "promptx": {
-        "title": "AI-Driven No-Code Platform (PromptX & Zero)",
-        "description": "Spearheaded frontend architecture for proprietary platforms including Zero (No-code) and PromptX (AI-driven interface), leveraging React.js and TypeScript to build scalable and highly interactive user interfaces."
+        "title": "Prompt-to-App No-Code Platform (PromptX)",
+        "description": "AI-driven no-code platform where users describe projects via prompts (type, UI, theme)—then generate apps on Oneweb. Led frontend planning and mentored 2 developers."
       }
     }
   },

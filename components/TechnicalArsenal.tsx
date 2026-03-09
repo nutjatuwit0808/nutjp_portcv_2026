@@ -5,11 +5,13 @@ import { useLocale } from "@/context/LocaleContext";
 
 const SKILL_GROUPS = [
   { titleKey: "skills.programming", skills: ["JavaScript", "TypeScript", "Java", "Python"] },
-  { titleKey: "skills.frontend", skills: ["React.js", "Next.js", "Redux", "Zustand", "HTML5/CSS3", "Tailwind CSS", "Material-UI (MUI)", "Ant Design", "jQuery"] },
+  { titleKey: "skills.frontend", skills: ["React.js", "Next.js", "Redux", "Zustand", "HTML5/CSS3", "Tailwind CSS", "Material-UI (MUI)", "Ant Design", "jQuery", "Highcharts", "Chart.js"] },
   { titleKey: "skills.backend", skills: ["Node.js (Express.js)", "NestJS", "Spring Boot (Java)"] },
+  { titleKey: "skills.aiData", skills: ["LLM Fine-tuning (Typhoon)", "Retrieval-Augmented Generation (RAG)", "Vector Databases"] },
   { titleKey: "skills.databases", skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis (Caching)", "Supabase", "Vector Databases"] },
-  { titleKey: "skills.cloudDevOps", skills: ["AWS (Lambda, Amplify, RDS, S3)", "DigitalOcean", "Docker", "CI/CD Pipelines", "GitHub", "GitLab", "Snyk", "Grafana", "Cloudflare", "Vercel"] },
-  { titleKey: "skills.specialized", skills: ["RAG", "Mapbox (Geospatial Mapping)", "k6 (Performance/Load Testing)", "n8n (Workflow Automation)"] },
+  { titleKey: "skills.cloudDevOps", skills: ["AWS (Lambda, Amplify, RDS, S3)", "DigitalOcean", "Docker", "CI/CD Pipelines", "GitHub", "GitLab", "Snyk (Vulnerability Scanning)", "Grafana", "Cloudflare", "Vercel", "GitHub Actions", "GitLab CI"] },
+  { titleKey: "skills.integration", skills: ["Stripe", "Omise", "Resend", "SendGrid"] },
+  { titleKey: "skills.specialized", skills: ["Retrieval-Augmented Generation (RAG)", "Mapbox (Geospatial Mapping)", "k6 (Performance/Load Testing)", "n8n (Workflow Automation)"] },
 ];
 
 export function TechnicalArsenal() {

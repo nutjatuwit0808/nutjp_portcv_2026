@@ -40,9 +40,9 @@ export function Hero() {
         </div>
 
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+          <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">
             {t("hero.greeting")} {t("hero.name")}.
-          </h1>
+          </h3>
           <p className="text-xl text-slate-300 sm:text-2xl">
             {t("hero.tagline")}
           </p>
@@ -89,7 +89,7 @@ export function Hero() {
             {t("hero.cta.viewProjects")}
           </motion.button>
           <motion.a
-            href="/ResumeJatuwit2026.pdf"
+            href="/resume_jatuwit_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}

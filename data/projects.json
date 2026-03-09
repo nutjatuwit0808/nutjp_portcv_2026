@@ -3,105 +3,167 @@
     {
       "slug": "locable",
       "overviewTH": [
-        "แพลตฟอร์ม Geospatial สำหรับการจัดการแผนที่และข้อมูลอสังหาริมทรัพย์",
-        "การโหลดแผนที่และ geospatial points ช้าส่งผลต่อประสบการณ์ผู้ใช้",
-        "วัตถุประสงค์: ลดเวลาโหลดและปรับปรุงประสิทธิภาพการแสดงผลแผนที่"
+        "แพลตฟอร์ม GIS ที่พัฒนาเป็น service provider ให้ทีมโปรเจคนำไปใช้ต่อ",
+        "Custom map layer พร้อมปรับ style ผ่าน Mapbox",
+        "รูปแบบ No-code: ผู้ใช้ custom widgets (keystat, filter, map controller, search location, presentation, report) เพื่อแสดงผลบนแผนที่",
+        "Publish map เป็น URL สำหรับ iframe หรือติดตั้งผ่าน npm component",
+        "จัดการการแสดงผลแยกตาม role ของ user ตาม user key"
       ],
       "overviewEN": [
-        "Geospatial platform for property and map management",
-        "Map loading and geospatial points were slow, impacting user experience",
-        "Objective: Reduce load time and improve map rendering performance"
+        "GIS platform developed as a service provider for project teams to consume",
+        "Custom map layers with Mapbox-based style customization",
+        "No-code experience: users customize widgets (keystat, filter, map controller, search location, presentation, report) to display on the map",
+        "Publish map as URL for iframe embedding or install via npm component",
+        "Role-based display control per user key"
       ],
       "objectivesTH": [
-        "ลด API response time ให้ได้อย่างน้อย 50%",
-        "ให้ผู้ใช้โหลดแผนที่ได้เร็วขึ้นโดยไม่ต้องรอข้อมูลจาก API"
+        "ลดเวลาโหลด point data ให้ผ่านเกณฑ์ production deploy",
+        "ให้ผู้ใช้โหลดแผนที่ได้เร็วและเสถียร"
       ],
       "objectivesEN": [
-        "Reduce API response time by at least 50%",
-        "Enable faster map loading without waiting for API data"
+        "Reduce point-loading latency to meet production deploy criteria",
+        "Enable fast and stable map loading for users"
       ],
       "roleResponsibilitiesTH": [
-        "นำทีมปรับปรุงประสิทธิภาพและ refactor data-fetching logic",
+        "ร่วมกับทีม investigate ปัญหา point loading ช้า",
         "ออกแบบและดำเนินการ k6 load testing เพื่อวัด baseline และ validate ผลลัพธ์",
-        "Refactor ให้เสิร์ฟ geospatial points โดยตรงผ่านไฟล์ .geojson แทน API call"
+        "Re-design database diagram และ pre-process point เป็น .geojson, vector tiles ตามประเภทที่จำเป็น",
+        "Implement Redis caching สำหรับข้อมูลที่ user ดึงซ้ำ เพื่อ optimize response"
       ],
       "roleResponsibilitiesEN": [
-        "Led performance optimization and refactored data-fetching logic",
+        "Investigated slow point loading with the team",
         "Designed and executed k6 load testing to measure baseline and validate results",
-        "Refactored to serve geospatial points directly via .geojson files instead of API calls"
+        "Re-designed database diagram and pre-processed points into .geojson, vector tiles by required type",
+        "Implemented Redis caching for repeated user data to optimize response time"
       ],
-      "techStack": ["k6", "Next.js", "GeoJSON", "Mapbox", "Performance Testing"],
+      "techStack": ["Mapbox", "GeoJSON", "k6", "Redis", "PostgreSQL"],
       "challengesTH": [
-        "API response time สูงถึง 8,000ms ทำให้ผู้ใช้รอนาน",
-        "Geospatial data ถูก fetch ผ่าน API ทุกครั้งที่โหลดแผนที่",
-        "ข้อมูลจุดจำนวนมากส่งผลต่อ payload size และ latency"
+        "Response time 8,000ms ไม่ผ่านเกณฑ์ production deploy",
+        "Query จาก database แล้ว process ต่อ — เมื่อ data เยอะระบบช้ามาก",
+        "Table ที่ดึงมา process ยังไม่ normalize (sync จากส่วนกลางโดยไม่ผ่าน process)"
       ],
       "challengesEN": [
-        "API response time reached 8,000ms, causing long wait times for users",
-        "Geospatial data was fetched via API on every map load",
-        "Large point datasets impacted payload size and latency"
+        "8,000ms response time failed production deploy criteria",
+        "Query from database plus post-processing — system slowed significantly with large data",
+        "Source table was not normalized (synced from central without processing)"
       ],
       "solutionsTH": [
-        "ใช้ k6 load testing ระบุ bottleneck และวัดผลก่อน-หลัง",
-        "Refactor ให้ serve .geojson โดยตรง ลด round-trip ไปยัง API",
-        "บรรลุการลด response time 85% (8,000ms → 1,200ms)"
+        "Re-design database diagram และ pre-process point เป็น .geojson เก็บตามประเภทที่ใช้",
+        "Redis caching สำหรับข้อมูลที่ user ดึงซ้ำ",
+        "ผลลัพธ์: response time ลดเหลือ 1,200ms (85% reduction)"
       ],
       "solutionsEN": [
-        "Used k6 load testing to identify bottlenecks and measure before/after metrics",
-        "Refactored to serve .geojson directly, eliminating API round-trips",
-        "Achieved 85% response time reduction (8,000ms → 1,200ms)"
+        "Re-designed database diagram and pre-processed points into .geojson stored by type",
+        "Redis caching for repeated user data fetches",
+        "Result: response time reduced to 1,200ms (85% reduction)"
       ]
     },
     {
       "slug": "promptx",
       "overviewTH": [
-        "แพลตฟอร์ม proprietary สองตัว: Zero (No-code) และ PromptX (AI-driven interface)",
-        "Zero: ให้ผู้ใช้สร้าง workflow และ UI ได้โดยไม่ต้องเขียนโค้ด",
-        "PromptX: อินเทอร์เฟซที่ขับเคลื่อนด้วย AI สำหรับการทำงานกับข้อมูลและ automation"
+        "แพลตฟอร์ม No-code ที่ใช้ prompt ระบุรายละเอียดโปรเจค — ประเภทโปรเจค, หน้าตา UI, color theme",
+        "เมื่อ execute ระบบจะ generate แอปบน Oneweb ซึ่งเป็น core product ขององค์กร",
+        "เปิดโอกาสให้ non-developer สร้างแอปได้โดยไม่ต้องเขียนโค้ด"
       ],
       "overviewEN": [
-        "Two proprietary platforms: Zero (No-code) and PromptX (AI-driven interface)",
-        "Zero: Enables users to build workflows and UIs without writing code",
-        "PromptX: AI-driven interface for data work and automation"
+        "No-code platform where users describe projects via prompts—project type, UI layout, and color theme",
+        "On execution, the system generates apps on the Oneweb platform (core product)",
+        "Enables rapid prototyping and app creation without writing code"
       ],
       "objectivesTH": [
-        "สร้าง frontend architecture ที่ scale ได้และรองรับการขยายฟีเจอร์",
-        "ออกแบบ UI ที่มีปฏิสัมพันธ์สูงและรองรับ AI integration"
+        "ลดเวลาในการสร้างแอปด้วย natural language",
+        "เปิดให้ non-developer สร้างแอปได้อย่างรวดเร็ว"
       ],
       "objectivesEN": [
-        "Build a scalable frontend architecture that supports feature expansion",
-        "Design highly interactive UIs that support AI integration"
+        "Reduce time-to-app with natural language prompts",
+        "Empower non-developers to build apps rapidly"
       ],
       "roleResponsibilitiesTH": [
-        "นำหน้าสถาปัตยกรรม frontend สำหรับทั้ง Zero และ PromptX",
-        "ออกแบบ component structure และ state management ที่ maintainable",
-        "พัฒนา UI components ที่ reusable และรองรับ customization"
+        "วางแผนงานฝั่ง frontend และกำหนด roadmap",
+        "Mentor น้อง 2 คนด้าน architecture และ best practices",
+        "ดำเนินการ frontend และ วาง component structure"
       ],
       "roleResponsibilitiesEN": [
-        "Spearheaded frontend architecture for both Zero and PromptX",
-        "Designed component structure and maintainable state management",
-        "Built reusable UI components that support customization"
+        "Led frontend work planning and roadmap",
+        "Mentored 2 junior developers on architecture and best practices",
+        "Spearheaded frontend architecture and component structure"
       ],
-      "techStack": ["React.js", "TypeScript", "AI Integration", "No-Code", "State Management"],
+      "techStack": ["React.js", "TypeScript", "AI Integration", "Oneweb", "Prompt Engineering"],
       "challengesTH": [
-        "ต้องรองรับ No-code builder ที่ซับซ้อนและ dynamic",
-        "AI-driven interface ต้องการ UX ที่ตอบสนองและ intuitive",
-        "การ scale component library ให้รองรับ use cases หลากหลาย"
+        "แปลง natural language prompt เป็น UI ที่สอดคล้องและ production-ready",
+        "รักษาความสม่ำเสมอของ design เมื่อ generate จาก prompt หลากหลาย",
+        "Balance ระหว่าง mentorship กับ delivery timeline"
       ],
       "challengesEN": [
-        "Supporting complex and dynamic No-code builder requirements",
-        "AI-driven interface needed responsive and intuitive UX",
-        "Scaling component library to support diverse use cases"
+        "Translating natural language prompts into consistent, production-ready UI",
+        "Maintaining design consistency across diverse generated use cases",
+        "Balancing mentorship with delivery timelines"
       ],
       "solutionsTH": [
-        "ใช้ TypeScript เพื่อ type safety และ maintainability",
-        "ออกแบบ component architecture แบบ modular และ composable",
-        "สร้าง design system ที่รองรับทั้ง No-code และ AI-driven workflows"
+        "ออกแบบ prompt-to-UI schema และ validation pipeline",
+        "สร้าง design system พร้อม theme tokens สำหรับ color/UI generation",
+        "จัดโครงสร้าง mentorship ผ่าน code review และ pairing sessions"
       ],
       "solutionsEN": [
-        "Leveraged TypeScript for type safety and maintainability",
-        "Designed modular and composable component architecture",
-        "Built a design system supporting both No-code and AI-driven workflows"
+        "Designed prompt-to-UI schema and validation pipeline",
+        "Built a design system with theme tokens for color/UI generation",
+        "Established code review and pairing sessions for the team"
+      ]
+    },
+    {
+      "slug": "zero",
+      "overviewTH": [
+        "แพลตฟอร์ม Lowcode ที่ใช้ custom layout เพื่อจัด UI ตามต้องการ",
+        "ปรับ config styles ได้ตามความต้องการของโปรเจค",
+        "รองรับ UI kit สำหรับ reuse component ที่ custom แล้ว",
+        "เมื่อ custom เสร็จสิ้น ระบบจะ generate แอปบน Oneweb ซึ่งเป็น core product ขององค์กร",
+        "ลดเวลา build แอปและเปิดโอกาสให้ non-developer สร้างแอปได้โดยไม่ต้องเขียนโค้ด"
+      ],
+      "overviewEN": [
+        "Lowcode platform with custom layout engine for flexible UI composition",
+        "Configurable styles to match project requirements",
+        "Reusable UI kit for custom components—build once, reuse across projects",
+        "On completion, the system generates apps on the Oneweb platform (core product)",
+        "Reduces app build time and enables non-developers to create apps without writing code"
+      ],
+      "objectivesTH": [
+        "ลดเวลาในการพัฒนาแอปด้วย visual layout และ config แทนการเขียนโค้ด",
+        "เปิดให้ non-developer สร้างแอปได้ด้วย custom layout และ UI kit"
+      ],
+      "objectivesEN": [
+        "Reduce app development time with visual layout and config instead of code",
+        "Empower non-developers to build apps using custom layout and UI kit"
+      ],
+      "roleResponsibilitiesTH": [
+        "นำหน้าสถาปัตยกรรม frontend และออกแบบ custom layout engine",
+        "ออกแบบ UI kit structure สำหรับ component reuse",
+        "กำหนด schema สำหรับ style config และ validation pipeline"
+      ],
+      "roleResponsibilitiesEN": [
+        "Led frontend architecture and designed custom layout engine",
+        "Architected UI kit structure for component reuse",
+        "Defined schema for style config and validation pipeline"
+      ],
+      "techStack": ["React.js", "TypeScript", "Oneweb", "Design System", "Schema-driven Layout"],
+      "challengesTH": [
+        "ความยืดหยุ่นของ custom layout vs ความ maintainable ของ generated output",
+        "การ reuse component ใน UI kit ให้รองรับ use case หลากหลาย",
+        "ความสม่ำเสมอของ design เมื่อ config styles แตกต่างกัน"
+      ],
+      "challengesEN": [
+        "Balancing custom layout flexibility with maintainable generated output",
+        "Reusing UI kit components across diverse use cases",
+        "Maintaining design consistency when style configs vary widely"
+      ],
+      "solutionsTH": [
+        "ออกแบบ layout schema และ validation rules เพื่อควบคุมคุณภาพ output",
+        "สร้าง design tokens สำหรับ theming ให้สม่ำเสมอ",
+        "ใช้ component composition pattern ใน UI kit เพื่อรองรับ use case หลากหลาย"
+      ],
+      "solutionsEN": [
+        "Designed layout schema and validation rules to ensure output quality",
+        "Built design tokens for consistent theming across generated apps",
+        "Applied component composition pattern in UI kit for diverse use cases"
       ]
     }
   ]
