@@ -1,27 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale } from "@/context/LocaleContext";
 
 const SKILL_GROUPS = [
-  {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Mapbox"],
-  },
-  {
-    title: "Backend & Architecture",
-    skills: ["Node.js", "NestJS", "Kafka", "Architecture Design"],
-  },
-  {
-    title: "Databases & Cloud",
-    skills: ["PostgreSQL", "MongoDB", "AWS", "Docker"],
-  },
-  {
-    title: "AI & Data",
-    skills: ["Python", "Vector Databases", "RAG", "Prompt Engineering"],
-  },
+  { titleKey: "skills.frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Mapbox"] },
+  { titleKey: "skills.backend", skills: ["Node.js", "NestJS", "Kafka", "Architecture Design"] },
+  { titleKey: "skills.databases", skills: ["PostgreSQL", "MongoDB", "AWS", "Docker"] },
+  { titleKey: "skills.ai", skills: ["Python", "Vector Databases", "RAG", "Prompt Engineering"] },
 ];
 
 export function TechnicalArsenal() {
+  const { t } = useLocale();
+
   return (
     <section
       id="skills"
@@ -35,12 +26,12 @@ export function TechnicalArsenal() {
         className="mx-auto max-w-4xl"
       >
         <h2 className="mb-8 text-3xl font-bold text-white">
-          Technical Arsenal
+          {t("skills.title")}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {SKILL_GROUPS.map((group, i) => (
             <motion.div
-              key={group.title}
+              key={group.titleKey}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,7 +39,7 @@ export function TechnicalArsenal() {
               className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
             >
               <h3 className="mb-4 text-lg font-semibold text-blue-400">
-                {group.title}
+                {t(group.titleKey)}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (

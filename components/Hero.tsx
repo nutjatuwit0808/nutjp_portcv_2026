@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FileDown, FolderKanban, Github, Linkedin, Mail } from "lucide-react";
+import { useLocale } from "@/context/LocaleContext";
 import { scrollToSection } from "@/lib/scroll-utils";
 
 export function Hero() {
   const [imgError, setImgError] = useState(false);
+  const { t } = useLocale();
 
   return (
     <section
@@ -39,14 +41,13 @@ export function Hero() {
 
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Hi, I&apos;m Jatuwit.
+            {t("hero.greeting")} {t("hero.name")}.
           </h1>
           <p className="text-xl text-slate-300 sm:text-2xl">
-            I build scalable systems and intelligent applications.
+            {t("hero.tagline")}
           </p>
           <p className="max-w-2xl text-slate-400">
-            7 years of experience architecting robust platforms, optimizing
-            performance, and integrating AI solutions.
+            {t("hero.subtitle")}
           </p>
         </div>
 
@@ -81,11 +82,11 @@ export function Hero() {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => scrollToSection("projects")}
+            onClick={() => scrollToSection("case-studies")}
             className="flex items-center gap-2 rounded-lg bg-blue-500 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-600"
           >
             <FolderKanban size={20} />
-            View Projects
+            {t("hero.cta.viewProjects")}
           </motion.button>
           <motion.a
             href="/ResumeJatuwit2026.pdf"
@@ -96,7 +97,7 @@ export function Hero() {
             className="flex items-center gap-2 rounded-lg border border-slate-600 bg-slate-800/50 px-6 py-3 font-medium text-slate-200 transition-colors hover:border-blue-500/50 hover:bg-slate-700/50"
           >
             <FileDown size={20} />
-            Download Resume
+            {t("hero.cta.downloadResume")}
           </motion.a>
         </div>
       </motion.div>

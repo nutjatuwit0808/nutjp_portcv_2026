@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "หน้าแรก",
+    "about": "เกี่ยวกับ",
+    "skills": "ทักษะ",
+    "caseStudies": "ตัวอย่างงาน",
+    "projects": "โปรเจกต์",
+    "experience": "ประสบการณ์",
+    "credentials": "ใบรับรอง",
+    "contact": "ติดต่อ"
+  },
+  "hero": {
+    "greeting": "สวัสดีครับ ผม",
+    "name": "Jatuwit",
+    "tagline": "สร้างระบบที่ scale ได้ และแอปพลิเคชันอัจฉริยะ",
+    "subtitle": "ประสบการณ์ 7 ปี ในการออกแบบแพลตฟอร์มที่แข็งแกร่ง ปรับปรุงประสิทธิภาพ และบูรณาการโซลูชัน AI",
+    "cta": {
+      "viewProjects": "ดูผลงาน",
+      "downloadResume": "ดาวน์โหลด Resume"
+    }
+  },
+  "about": {
+    "title": "เกี่ยวกับผม",
+    "paragraph1": "ผมเริ่มต้นเป็น Java Developer ที่ Godygo สร้าง backend APIs สำหรับแอปโลจิสติกส์ จากนั้นย้ายไป Avalant พัฒนาเป็น Full Stack Developer และ Senior Full Stack Developer — นำหน้าสถาปัตยกรรม frontend สำหรับแพลตฟอร์มอย่าง \"Zero\" (No-code) และ \"PromptX\" (AI-driven interface) ด้วย React.js และ TypeScript",
+    "paragraph2": "ผมหลงใหลในเรื่องประสิทธิภาพ ที่ Bedrock Analytics ผมลดเวลา API response ลง 85% (จาก 8,000ms เหลือ 1,200ms) โดยใช้ k6 load testing และ refactor data-fetching ให้เสิร์ฟ geospatial points ผ่านไฟล์ .geojson โดยตรง",
+    "paragraph3": "วันนี้ผมมุ่งเน้นการบูรณาการ AI — RAG, Vector Databases และการสร้างแอปพลิเคชันอัจฉริยะที่ scale ได้ ผมกำลังมองหาบทบาทที่มีผลกระทบเพื่อขับเคลื่อนการพัฒนาซอฟต์แวร์ที่สร้างสรรค์"
+  },
+  "skills": {
+    "title": "ทักษะเทคนิค",
+    "frontend": "Frontend",
+    "backend": "Backend & Architecture",
+    "databases": "Databases & Cloud",
+    "ai": "AI & Data"
+  },
+  "caseStudies": {
+    "title": "ตัวอย่างงาน",
+    "subtitle": "ผลงานจาก GitHub — สถาปัตยกรรมและโซลูชันที่ออกแบบและพัฒนาขึ้น",
+    "viewOnGitHub": "ดูบน GitHub",
+    "featured": "Featured"
+  },
+  "projects": {
+    "title": "โปรเจกต์จากงานจริง",
+    "subtitle": "ประสบการณ์จากองค์กร (NDA — ไม่เปิดเผย source code)",
+    "liveDemo": "Live Demo",
+    "githubRepo": "GitHub Repo",
+    "items": {
+      "locable": {
+        "title": "Performance Optimization (Locable)",
+        "description": "ลดเวลา API response ลง 85% (จาก 8,000ms เหลือ 1,200ms) ด้วย k6 load testing และ refactor data-fetching logic เพื่อเสิร์ฟ geospatial points โดยตรงผ่านไฟล์ .geojson"
+      },
+      "promptx": {
+        "title": "AI-Driven No-Code Platform (PromptX & Zero)",
+        "description": "นำหน้าสถาปัตยกรรม frontend สำหรับแพลตฟอร์ม proprietary รวมถึง Zero (No-code) และ PromptX (AI-driven interface) ใช้ React.js และ TypeScript สร้าง UI ที่ scale ได้และมีปฏิสัมพันธ์สูง"
+      }
+    }
+  },
+  "experience": {
+    "title": "ประสบการณ์การทำงาน",
+    "location": "Bangkok, Thailand",
+    "items": {
+      "bedrock": {
+        "role": "Senior Full Stack Developer (Outsource)",
+        "period": "Dec 2024 - Present",
+        "highlights": [
+          "ออกแบบ No-Code Map Platform ด้วย Mapbox พร้อม geospatial management interface ที่ยืดหยุ่น",
+          "ลดเวลา API response ลง 85% (8,000ms → 1,200ms) ด้วย k6 load testing และ refactor .geojson"
+        ]
+      },
+      "avalant_senior": {
+        "role": "Senior Full Stack Developer",
+        "period": "Jan 2021 - Nov 2024",
+        "highlights": [
+          "ที่ปรึกษาทางเทคนิคหลักสำหรับองค์กรลูกค้า (SCG) ด้านระบบ scalability",
+          "ให้คำแนะนำ junior developer 2 คนผ่าน code reviews และทิศทางทางเทคนิค"
+        ]
+      },
+      "avalant_full": {
+        "role": "Full Stack Developer",
+        "period": "Dec 2019 - Jan 2021",
+        "highlights": [
+          "นำหน้าสถาปัตยกรรม frontend สำหรับ Zero (No-code) และ PromptX (AI-driven interface)",
+          "สร้าง UI ที่ scale ได้ด้วย React.js และ TypeScript"
+        ]
+      },
+      "godygo": {
+        "role": "Java Developer",
+        "period": "Aug 2018 - Feb 2019",
+        "highlights": [
+          "พัฒนาและดูแล backend infrastructure สำหรับแอปโลจิสติกส์ Godygo",
+          "สร้าง APIs ที่เชื่อถือได้สำหรับ Android mobile interface"
+        ]
+      }
+    }
+  },
+  "credentials": {
+    "title": "ใบรับรอง",
+    "toeic": "คะแนน TOEIC",
+    "transcript": "ใบแสดงผลการศึกษา",
+    "downloadPdf": "ดาวน์โหลด PDF",
+    "score": "คะแนน",
+    "testDate": "วันที่สอบ",
+    "education": "การศึกษา",
+    "degree": "ปริญญา",
+    "institution": "สถาบัน",
+    "period": "ช่วงเวลา",
+    "gpa": "GPA"
+  },
+  "contact": {
+    "title": "ติดต่อ",
+    "name": "ชื่อ",
+    "email": "อีเมล",
+    "message": "ข้อความ",
+    "namePlaceholder": "ชื่อของคุณ",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "ข้อความของคุณ...",
+    "sendMessage": "ส่งข้อความ",
+    "thankYou": "ขอบคุณครับ!"
+  }
+}

@@ -1,19 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale } from "@/context/LocaleContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import {
   SECTION_IDS,
-  SECTION_LABELS,
+  SECTION_LABEL_KEYS,
   scrollToSection,
   useScrollSpy,
 } from "@/lib/scroll-utils";
 
 export function FloatingSidebar() {
   const activeSection = useScrollSpy();
+  const { t } = useLocale();
 
   return (
     <nav
-      className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 lg:block"
+      className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 lg:flex lg:flex-col lg:items-center lg:gap-4"
       aria-label="Section navigation"
     >
       <motion.div
@@ -33,10 +36,11 @@ export function FloatingSidebar() {
             }`}
             aria-current={activeSection === id ? "true" : undefined}
           >
-            {SECTION_LABELS[id]}
+            {t(SECTION_LABEL_KEYS[id])}
           </button>
         ))}
       </motion.div>
+      <LanguageSwitcher />
     </nav>
   );
 }

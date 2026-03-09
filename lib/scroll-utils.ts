@@ -6,19 +6,34 @@ export const SECTION_IDS = [
   "hero",
   "about",
   "skills",
+  "case-studies",
   "projects",
   "experience",
+  "credentials",
   "contact",
 ] as const;
 
 export type SectionId = (typeof SECTION_IDS)[number];
 
+export const SECTION_LABEL_KEYS: Record<SectionId, string> = {
+  hero: "nav.home",
+  about: "nav.about",
+  skills: "nav.skills",
+  "case-studies": "nav.caseStudies",
+  projects: "nav.projects",
+  experience: "nav.experience",
+  credentials: "nav.credentials",
+  contact: "nav.contact",
+};
+
 export const SECTION_LABELS: Record<SectionId, string> = {
   hero: "Home",
   about: "About",
   skills: "Skills",
+  "case-studies": "Case Studies",
   projects: "Projects",
   experience: "Experience",
+  credentials: "Credentials",
   contact: "Contact",
 };
 

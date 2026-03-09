@@ -4,8 +4,10 @@ import { TopProgressBar } from "@/components/TopProgressBar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { TechnicalArsenal } from "@/components/TechnicalArsenal";
+import { CaseStudiesShowcase } from "@/components/CaseStudiesShowcase";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
+import { Credentials } from "@/components/Credentials";
 import { Contact } from "@/components/Contact";
 
 export default function Home() {
@@ -18,8 +20,10 @@ export default function Home() {
         <Hero />
         <About />
         <TechnicalArsenal />
+        <CaseStudiesShowcase />
         <FeaturedProjects />
         <ExperienceTimeline />
+        <Credentials />
         <Contact />
       </main>
     </div>

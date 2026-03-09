@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "caseStudies": "Case Studies",
+    "projects": "Projects",
+    "experience": "Experience",
+    "credentials": "Credentials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Jatuwit",
+    "tagline": "I build scalable systems and intelligent applications.",
+    "subtitle": "7 years of experience architecting robust platforms, optimizing performance, and integrating AI solutions.",
+    "cta": {
+      "viewProjects": "View Projects",
+      "downloadResume": "Download Resume"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I started as a Java Developer at Godygo, building backend APIs for logistics applications. That foundation led me to Avalant, where I evolved into a Full Stack Developer and later Senior Full Stack Developer—spearheading frontend architecture for platforms like \"Zero\" (No-code) and \"PromptX\" (AI-driven interface) with React.js and TypeScript.",
+    "paragraph2": "I'm passionate about performance. At Bedrock Analytics, I reduced API response time by 85% (from 8,000ms to 1,200ms) using k6 load testing and refactoring data-fetching to serve geospatial points via .geojson files.",
+    "paragraph3": "Today I focus on AI integration—RAG, Vector Databases, and building intelligent applications that scale. I'm seeking an impactful role to drive innovative software development."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "frontend": "Frontend",
+    "backend": "Backend & Architecture",
+    "databases": "Databases & Cloud",
+    "ai": "AI & Data"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Engineering showcase from GitHub — architectures and solutions I've designed and built",
+    "viewOnGitHub": "View on GitHub",
+    "featured": "Featured"
+  },
+  "projects": {
+    "title": "Work Experience Projects",
+    "subtitle": "Projects from organizations (NDA — source code not disclosed)",
+    "liveDemo": "Live Demo",
+    "githubRepo": "GitHub Repo",
+    "items": {
+      "locable": {
+        "title": "Performance Optimization (Locable)",
+        "description": "Reduced API response time by 85% (from 8,000ms to 1,200ms) using k6 load testing and refactoring data-fetching logic to serve geospatial points directly via .geojson files."
+      },
+      "promptx": {
+        "title": "AI-Driven No-Code Platform (PromptX & Zero)",
+        "description": "Spearheaded frontend architecture for proprietary platforms including Zero (No-code) and PromptX (AI-driven interface), leveraging React.js and TypeScript to build scalable and highly interactive user interfaces."
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "location": "Bangkok, Thailand",
+    "items": {
+      "bedrock": {
+        "role": "Senior Full Stack Developer (Outsource)",
+        "period": "Dec 2024 - Present",
+        "highlights": [
+          "Architected No-Code Map Platform using Mapbox with flexible geospatial management interface",
+          "Reduced API response time by 85% (8,000ms → 1,200ms) via k6 load testing and .geojson refactoring"
+        ]
+      },
+      "avalant_senior": {
+        "role": "Senior Full Stack Developer",
+        "period": "Jan 2021 - Nov 2024",
+        "highlights": [
+          "Primary technical consultant for enterprise client (SCG) on system scalability",
+          "Mentored 2 junior developers with code reviews and technical direction"
+        ]
+      },
+      "avalant_full": {
+        "role": "Full Stack Developer",
+        "period": "Dec 2019 - Jan 2021",
+        "highlights": [
+          "Spearheaded frontend architecture for Zero (No-code) and PromptX (AI-driven interface)",
+          "Built scalable UIs with React.js and TypeScript"
+        ]
+      },
+      "godygo": {
+        "role": "Java Developer",
+        "period": "Aug 2018 - Feb 2019",
+        "highlights": [
+          "Developed and maintained backend infrastructure for Godygo logistics app",
+          "Built reliable APIs for Android mobile interface"
+        ]
+      }
+    }
+  },
+  "credentials": {
+    "title": "Credentials",
+    "toeic": "TOEIC Score",
+    "transcript": "Academic Transcript",
+    "downloadPdf": "Download PDF",
+    "score": "Score",
+    "testDate": "Test Date",
+    "education": "Education",
+    "degree": "Degree",
+    "institution": "Institution",
+    "period": "Period",
+    "gpa": "GPA"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Your message...",
+    "sendMessage": "Send Message",
+    "thankYou": "Thank you!"
+  }
+}

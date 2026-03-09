@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
+import { useLocale } from "@/context/LocaleContext";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useLocale();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,7 +26,9 @@ export function Contact() {
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-xl"
       >
-        <h2 className="mb-8 text-3xl font-bold text-white">Contact</h2>
+        <h2 className="mb-8 text-3xl font-bold text-white">
+          {t("contact.title")}
+        </h2>
         <div className="space-y-8">
           <a
             href="mailto:nutjatuwit.dev@gmail.com"
@@ -40,7 +44,7 @@ export function Contact() {
                 htmlFor="name"
                 className="mb-1 block text-sm text-slate-400"
               >
-                Name
+                {t("contact.name")}
               </label>
               <input
                 id="name"
@@ -48,7 +52,7 @@ export function Contact() {
                 type="text"
                 required
                 className="w-full rounded-lg border border-slate-600 bg-slate-800/50 px-4 py-2 text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                placeholder="Your name"
+                placeholder={t("contact.namePlaceholder")}
               />
             </div>
             <div>
@@ -56,7 +60,7 @@ export function Contact() {
                 htmlFor="email"
                 className="mb-1 block text-sm text-slate-400"
               >
-                Email
+                {t("contact.email")}
               </label>
               <input
                 id="email"
@@ -64,7 +68,7 @@ export function Contact() {
                 type="email"
                 required
                 className="w-full rounded-lg border border-slate-600 bg-slate-800/50 px-4 py-2 text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                placeholder="your@email.com"
+                placeholder={t("contact.emailPlaceholder")}
               />
             </div>
             <div>
@@ -72,7 +76,7 @@ export function Contact() {
                 htmlFor="message"
                 className="mb-1 block text-sm text-slate-400"
               >
-                Message
+                {t("contact.message")}
               </label>
               <textarea
                 id="message"
@@ -80,7 +84,7 @@ export function Contact() {
                 rows={4}
                 required
                 className="w-full rounded-lg border border-slate-600 bg-slate-800/50 px-4 py-2 text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                placeholder="Your message..."
+                placeholder={t("contact.messagePlaceholder")}
               />
             </div>
             <button
@@ -89,7 +93,7 @@ export function Contact() {
               className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-3 font-medium text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
             >
               <Send size={18} />
-              {submitted ? "Thank you!" : "Send Message"}
+              {submitted ? t("contact.thankYou") : t("contact.sendMessage")}
             </button>
           </form>
         </div>

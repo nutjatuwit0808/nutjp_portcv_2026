@@ -1,7 +1,7 @@
 "use client";
 
 export function TopProgressBar() {
-  const progress = 10;
+  const progress = 60;
 
   return (
     <div className="fixed left-0 right-0 top-0 z-50 bg-slate-900/90 backdrop-blur-sm">

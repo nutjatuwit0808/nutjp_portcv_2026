@@ -3,14 +3,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from "@/context/LocaleContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import {
   SECTION_IDS,
-  SECTION_LABELS,
+  SECTION_LABEL_KEYS,
   scrollToSection,
 } from "@/lib/scroll-utils";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const { t } = useLocale();
 
   const handleLinkClick = (id: string) => {
     scrollToSection(id);
@@ -19,13 +22,16 @@ export function MobileNav() {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed right-4 top-4 z-50 rounded-lg bg-slate-800/80 p-2 text-slate-200 backdrop-blur-sm lg:hidden"
-        aria-label="Open menu"
-      >
-        <Menu size={24} />
-      </button>
+      <div className="fixed right-4 top-4 z-50 flex items-center gap-2 lg:hidden">
+        <LanguageSwitcher />
+        <button
+          onClick={() => setOpen(true)}
+          className="rounded-lg bg-slate-800/80 p-2 text-slate-200 backdrop-blur-sm"
+          aria-label="Open menu"
+        >
+          <Menu size={24} />
+        </button>
+      </div>
 
       <AnimatePresence>
         {open && (
@@ -59,7 +65,7 @@ export function MobileNav() {
                   onClick={() => handleLinkClick(id)}
                   className="rounded px-3 py-2 text-left text-slate-200 transition-colors hover:bg-slate-800 hover:text-blue-400"
                 >
-                  {SECTION_LABELS[id]}
+                  {t(SECTION_LABEL_KEYS[id])}
                 </button>
               ))}
             </motion.nav>
