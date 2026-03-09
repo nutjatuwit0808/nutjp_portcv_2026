@@ -25,6 +25,7 @@ export function About() {
           <p>{t("about.paragraph1")}</p>
           <p>{t("about.paragraph2")}</p>
           <p>{t("about.paragraph3")}</p>
+          <p>{t("about.paragraph4")}</p>
         </div>
       </motion.div>
     </section>

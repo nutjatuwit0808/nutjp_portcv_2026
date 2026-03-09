@@ -27,7 +27,7 @@ export function Hero() {
             <span className="text-4xl font-bold text-slate-400">JP</span>
           ) : (
             <Image
-              src="/profile.jpg"
+              src="/nutjatuwit_cleaned.webp"
               alt="Jatuwit Pitukdansakul"
               width={128}
               height={128}

@@ -40,3 +40,22 @@ export interface CredentialsData {
   toeic?: ToeicCredential;
   education?: EducationCredential;
 }
+
+export interface ProjectDetail {
+  slug: string;
+  overviewTH: string[];
+  overviewEN: string[];
+  objectivesTH: string[];
+  objectivesEN: string[];
+  roleResponsibilitiesTH: string[];
+  roleResponsibilitiesEN: string[];
+  techStack: string[];
+  challengesTH: string[];
+  challengesEN: string[];
+  solutionsTH: string[];
+  solutionsEN: string[];
+}
+
+export interface ProjectsData {
+  items: ProjectDetail[];
+}

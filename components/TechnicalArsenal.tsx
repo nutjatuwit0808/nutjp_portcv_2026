@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { useLocale } from "@/context/LocaleContext";
 
 const SKILL_GROUPS = [
-  { titleKey: "skills.frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Mapbox"] },
-  { titleKey: "skills.backend", skills: ["Node.js", "NestJS", "Kafka", "Architecture Design"] },
-  { titleKey: "skills.databases", skills: ["PostgreSQL", "MongoDB", "AWS", "Docker"] },
-  { titleKey: "skills.ai", skills: ["Python", "Vector Databases", "RAG", "Prompt Engineering"] },
+  { titleKey: "skills.programming", skills: ["JavaScript", "TypeScript", "Java", "Python"] },
+  { titleKey: "skills.frontend", skills: ["React.js", "Next.js", "Redux", "Zustand", "HTML5/CSS3", "Tailwind CSS", "Material-UI (MUI)", "Ant Design", "jQuery"] },
+  { titleKey: "skills.backend", skills: ["Node.js (Express.js)", "NestJS", "Spring Boot (Java)"] },
+  { titleKey: "skills.databases", skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis (Caching)", "Supabase", "Vector Databases"] },
+  { titleKey: "skills.cloudDevOps", skills: ["AWS (Lambda, Amplify, RDS, S3)", "DigitalOcean", "Docker", "CI/CD Pipelines", "GitHub", "GitLab", "Snyk", "Grafana", "Cloudflare", "Vercel"] },
+  { titleKey: "skills.specialized", skills: ["RAG", "Mapbox (Geospatial Mapping)", "k6 (Performance/Load Testing)", "n8n (Workflow Automation)"] },
 ];
 
 export function TechnicalArsenal() {
@@ -28,7 +30,7 @@ export function TechnicalArsenal() {
         <h2 className="mb-8 text-3xl font-bold text-white">
           {t("skills.title")}
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SKILL_GROUPS.map((group, i) => (
             <motion.div
               key={group.titleKey}
@@ -36,7 +38,7 @@ export function TechnicalArsenal() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
+              className="flex h-full min-h-[180px] flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
             >
               <h3 className="mb-4 text-lg font-semibold text-blue-400">
                 {t(group.titleKey)}

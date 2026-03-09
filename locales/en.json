@@ -12,8 +12,8 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Jatuwit",
-    "tagline": "I build scalable systems and intelligent applications.",
-    "subtitle": "7 years of experience architecting robust platforms, optimizing performance, and integrating AI solutions.",
+    "tagline": "Senior Full Stack Developer",
+    "subtitle": "7 years of experience architecting robust platforms, geospatial systems, and AI solutions.",
     "cta": {
       "viewProjects": "View Projects",
       "downloadResume": "Download Resume"
@@ -21,16 +21,19 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I started as a Java Developer at Godygo, building backend APIs for logistics applications. That foundation led me to Avalant, where I evolved into a Full Stack Developer and later Senior Full Stack Developer—spearheading frontend architecture for platforms like \"Zero\" (No-code) and \"PromptX\" (AI-driven interface) with React.js and TypeScript.",
-    "paragraph2": "I'm passionate about performance. At Bedrock Analytics, I reduced API response time by 85% (from 8,000ms to 1,200ms) using k6 load testing and refactoring data-fetching to serve geospatial points via .geojson files.",
-    "paragraph3": "Today I focus on AI integration—RAG, Vector Databases, and building intelligent applications that scale. I'm seeking an impactful role to drive innovative software development."
+    "paragraph1": "I am a Senior Full Stack Developer with 7 years of experience in architecting scalable, high-performance systems and geospatial platforms. My core philosophy centers on performance optimization—notably evidenced by my track record of reducing API response times by 85% to ensure seamless user experiences.",
+    "paragraph2": "I have deep experience in geospatial technologies with Mapbox and managing geospatial data to optimizing map loading and real-time fleet tracking.",
+    "paragraph3": "I have contributed to developing the No-Code platform PromptX (AI-driven interface) and the Low-Code platform OneWeb",
+    "paragraph4": "Currently, I am diving deep into Generative AI and RAG (Retrieval-Augmented Generation) to build next-generation solutions that bridge the gap between complex data and intuitive user interfaces."
   },
   "skills": {
     "title": "Technical Skills",
-    "frontend": "Frontend",
+    "programming": "Programming Languages",
+    "frontend": "Frontend Technologies",
     "backend": "Backend & Architecture",
-    "databases": "Databases & Cloud",
-    "ai": "AI & Data"
+    "databases": "Databases & AI Data",
+    "cloudDevOps": "Cloud, DevOps & Security",
+    "specialized": "Specialized Skills & Tools"
   },
   "caseStudies": {
     "title": "Case Studies",
@@ -104,6 +107,14 @@
     "institution": "Institution",
     "period": "Period",
     "gpa": "GPA"
+  },
+  "projectDetail": {
+    "overview": "Project Overview & Objective",
+    "role": "Role & Responsibilities",
+    "techStack": "Tech Stack & Tools",
+    "challenges": "Key Challenges & Solutions",
+    "backToProjects": "Back to Projects",
+    "viewDetails": "View Details"
   },
   "contact": {
     "title": "Contact",

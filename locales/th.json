@@ -12,8 +12,8 @@
   "hero": {
     "greeting": "สวัสดีครับ ผม",
     "name": "Jatuwit",
-    "tagline": "สร้างระบบที่ scale ได้ และแอปพลิเคชันอัจฉริยะ",
-    "subtitle": "ประสบการณ์ 7 ปี ในการออกแบบแพลตฟอร์มที่แข็งแกร่ง ปรับปรุงประสิทธิภาพ และบูรณาการโซลูชัน AI",
+    "tagline": "Senior Full Stack Developer",
+    "subtitle": "ประสบการณ์ 7 ปี ในการออกแบบแพลตฟอร์มที่แข็งแกร่ง Geospatial Systems และบูรณาการโซลูชัน AI",
     "cta": {
       "viewProjects": "ดูผลงาน",
       "downloadResume": "ดาวน์โหลด Resume"
@@ -21,16 +21,19 @@
   },
   "about": {
     "title": "เกี่ยวกับผม",
-    "paragraph1": "ผมเริ่มต้นเป็น Java Developer ที่ Godygo สร้าง backend APIs สำหรับแอปโลจิสติกส์ จากนั้นย้ายไป Avalant พัฒนาเป็น Full Stack Developer และ Senior Full Stack Developer — นำหน้าสถาปัตยกรรม frontend สำหรับแพลตฟอร์มอย่าง \"Zero\" (No-code) และ \"PromptX\" (AI-driven interface) ด้วย React.js และ TypeScript",
-    "paragraph2": "ผมหลงใหลในเรื่องประสิทธิภาพ ที่ Bedrock Analytics ผมลดเวลา API response ลง 85% (จาก 8,000ms เหลือ 1,200ms) โดยใช้ k6 load testing และ refactor data-fetching ให้เสิร์ฟ geospatial points ผ่านไฟล์ .geojson โดยตรง",
-    "paragraph3": "วันนี้ผมมุ่งเน้นการบูรณาการ AI — RAG, Vector Databases และการสร้างแอปพลิเคชันอัจฉริยะที่ scale ได้ ผมกำลังมองหาบทบาทที่มีผลกระทบเพื่อขับเคลื่อนการพัฒนาซอฟต์แวร์ที่สร้างสรรค์"
+    "paragraph1": "ผมเป็น Senior Full Stack Developer ที่มีความเชี่ยวชาญในการสร้างระบบที่รองรับการขยายตัว (Scalable Systems) และ Geospatial Platforms มากว่า 7 ปี สิ่งที่ผมให้ความสำคัญที่สุดคือ 'ประสิทธิภาพ' โดยผมเคยมีประสบการณ์เพิ่มความเร็วให้กับ API ได้สูงถึง 85% เพื่อมอบประสบการณ์การใช้งานที่ลื่นไหลที่สุดให้กับผู้ใช้",
+    "paragraph2": "ผมมีประสบการณ์ด้าน Geospatial ด้วย Mapbox การจัดการ geospatial data ไปจนถึงการ optimize การโหลดแผนที่และ real-time fleet tracking",
+    "paragraph3": "ผมเคยมีส่วนร่วมในการพัฒนาแพลตฟอร์ม No-Code ชื่อ PromptX (AI-driven interface) และ Low-Code ชื่อ OneWeb",
+    "paragraph4": "ปัจจุบันผมกำลังมุ่งเน้นการนำเทคโนโลยี Generative AI และ RAG (Retrieval-Augmented Generation) มาผสานเข้ากับ Software Development เพื่อสร้างนวัตกรรมที่ช่วยยกระดับการทำงานให้ก้าวไปอีกขั้น"
   },
   "skills": {
     "title": "ทักษะเทคนิค",
-    "frontend": "Frontend",
+    "programming": "ภาษาการเขียนโปรแกรม",
+    "frontend": "Frontend Technologies",
     "backend": "Backend & Architecture",
-    "databases": "Databases & Cloud",
-    "ai": "AI & Data"
+    "databases": "Databases & AI Data",
+    "cloudDevOps": "Cloud, DevOps & Security",
+    "specialized": "ทักษะเฉพาะทางและเครื่องมือ"
   },
   "caseStudies": {
     "title": "ตัวอย่างงาน",
@@ -104,6 +107,14 @@
     "institution": "สถาบัน",
     "period": "ช่วงเวลา",
     "gpa": "GPA"
+  },
+  "projectDetail": {
+    "overview": "ภาพรวมและวัตถุประสงค์",
+    "role": "บทบาทและความรับผิดชอบ",
+    "techStack": "Tech Stack และเครื่องมือ",
+    "challenges": "ความท้าทายและโซลูชันหลัก",
+    "backToProjects": "กลับไปโปรเจกต์",
+    "viewDetails": "ดูรายละเอียด"
   },
   "contact": {
     "title": "ติดต่อ",

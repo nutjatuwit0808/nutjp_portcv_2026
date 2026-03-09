@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "slug": "locable",
+      "overviewTH": [
+        "แพลตฟอร์ม Geospatial สำหรับการจัดการแผนที่และข้อมูลอสังหาริมทรัพย์",
+        "การโหลดแผนที่และ geospatial points ช้าส่งผลต่อประสบการณ์ผู้ใช้",
+        "วัตถุประสงค์: ลดเวลาโหลดและปรับปรุงประสิทธิภาพการแสดงผลแผนที่"
+      ],
+      "overviewEN": [
+        "Geospatial platform for property and map management",
+        "Map loading and geospatial points were slow, impacting user experience",
+        "Objective: Reduce load time and improve map rendering performance"
+      ],
+      "objectivesTH": [
+        "ลด API response time ให้ได้อย่างน้อย 50%",
+        "ให้ผู้ใช้โหลดแผนที่ได้เร็วขึ้นโดยไม่ต้องรอข้อมูลจาก API"
+      ],
+      "objectivesEN": [
+        "Reduce API response time by at least 50%",
+        "Enable faster map loading without waiting for API data"
+      ],
+      "roleResponsibilitiesTH": [
+        "นำทีมปรับปรุงประสิทธิภาพและ refactor data-fetching logic",
+        "ออกแบบและดำเนินการ k6 load testing เพื่อวัด baseline และ validate ผลลัพธ์",
+        "Refactor ให้เสิร์ฟ geospatial points โดยตรงผ่านไฟล์ .geojson แทน API call"
+      ],
+      "roleResponsibilitiesEN": [
+        "Led performance optimization and refactored data-fetching logic",
+        "Designed and executed k6 load testing to measure baseline and validate results",
+        "Refactored to serve geospatial points directly via .geojson files instead of API calls"
+      ],
+      "techStack": ["k6", "Next.js", "GeoJSON", "Mapbox", "Performance Testing"],
+      "challengesTH": [
+        "API response time สูงถึง 8,000ms ทำให้ผู้ใช้รอนาน",
+        "Geospatial data ถูก fetch ผ่าน API ทุกครั้งที่โหลดแผนที่",
+        "ข้อมูลจุดจำนวนมากส่งผลต่อ payload size และ latency"
+      ],
+      "challengesEN": [
+        "API response time reached 8,000ms, causing long wait times for users",
+        "Geospatial data was fetched via API on every map load",
+        "Large point datasets impacted payload size and latency"
+      ],
+      "solutionsTH": [
+        "ใช้ k6 load testing ระบุ bottleneck และวัดผลก่อน-หลัง",
+        "Refactor ให้ serve .geojson โดยตรง ลด round-trip ไปยัง API",
+        "บรรลุการลด response time 85% (8,000ms → 1,200ms)"
+      ],
+      "solutionsEN": [
+        "Used k6 load testing to identify bottlenecks and measure before/after metrics",
+        "Refactored to serve .geojson directly, eliminating API round-trips",
+        "Achieved 85% response time reduction (8,000ms → 1,200ms)"
+      ]
+    },
+    {
+      "slug": "promptx",
+      "overviewTH": [
+        "แพลตฟอร์ม proprietary สองตัว: Zero (No-code) และ PromptX (AI-driven interface)",
+        "Zero: ให้ผู้ใช้สร้าง workflow และ UI ได้โดยไม่ต้องเขียนโค้ด",
+        "PromptX: อินเทอร์เฟซที่ขับเคลื่อนด้วย AI สำหรับการทำงานกับข้อมูลและ automation"
+      ],
+      "overviewEN": [
+        "Two proprietary platforms: Zero (No-code) and PromptX (AI-driven interface)",
+        "Zero: Enables users to build workflows and UIs without writing code",
+        "PromptX: AI-driven interface for data work and automation"
+      ],
+      "objectivesTH": [
+        "สร้าง frontend architecture ที่ scale ได้และรองรับการขยายฟีเจอร์",
+        "ออกแบบ UI ที่มีปฏิสัมพันธ์สูงและรองรับ AI integration"
+      ],
+      "objectivesEN": [
+        "Build a scalable frontend architecture that supports feature expansion",
+        "Design highly interactive UIs that support AI integration"
+      ],
+      "roleResponsibilitiesTH": [
+        "นำหน้าสถาปัตยกรรม frontend สำหรับทั้ง Zero และ PromptX",
+        "ออกแบบ component structure และ state management ที่ maintainable",
+        "พัฒนา UI components ที่ reusable และรองรับ customization"
+      ],
+      "roleResponsibilitiesEN": [
+        "Spearheaded frontend architecture for both Zero and PromptX",
+        "Designed component structure and maintainable state management",
+        "Built reusable UI components that support customization"
+      ],
+      "techStack": ["React.js", "TypeScript", "AI Integration", "No-Code", "State Management"],
+      "challengesTH": [
+        "ต้องรองรับ No-code builder ที่ซับซ้อนและ dynamic",
+        "AI-driven interface ต้องการ UX ที่ตอบสนองและ intuitive",
+        "การ scale component library ให้รองรับ use cases หลากหลาย"
+      ],
+      "challengesEN": [
+        "Supporting complex and dynamic No-code builder requirements",
+        "AI-driven interface needed responsive and intuitive UX",
+        "Scaling component library to support diverse use cases"
+      ],
+      "solutionsTH": [
+        "ใช้ TypeScript เพื่อ type safety และ maintainability",
+        "ออกแบบ component architecture แบบ modular และ composable",
+        "สร้าง design system ที่รองรับทั้ง No-code และ AI-driven workflows"
+      ],
+      "solutionsEN": [
+        "Leveraged TypeScript for type safety and maintainability",
+        "Designed modular and composable component architecture",
+        "Built a design system supporting both No-code and AI-driven workflows"
+      ]
+    }
+  ]
+}

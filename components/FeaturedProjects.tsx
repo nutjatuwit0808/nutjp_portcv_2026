@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 
 const PROJECT_KEYS = [
@@ -30,41 +31,40 @@ export function FeaturedProjects() {
         <p className="mb-8 text-slate-400">{t("projects.subtitle")}</p>
         <div className="grid gap-6 md:grid-cols-2">
           {PROJECT_KEYS.map((project, i) => (
-            <motion.article
+            <Link
               key={project.key}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6 transition-colors hover:border-slate-600"
+              href={`/projects/${project.key}`}
+              className="block h-full"
             >
-              <h3 className="mb-3 text-xl font-semibold text-white">
-                {t(`projects.items.${project.key}.title`)}
-              </h3>
-              <p className="mb-4 flex-1 text-sm text-slate-400 leading-relaxed">
-                {t(`projects.items.${project.key}.description`)}
-              </p>
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded bg-slate-700/80 px-2 py-0.5 text-xs text-slate-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-3">
-                <span className="flex items-center gap-1.5 text-sm text-slate-500">
-                  <ExternalLink size={16} />
-                  {t("projects.liveDemo")} (NDA)
-                </span>
-                <span className="flex items-center gap-1.5 text-sm text-slate-500">
-                  <Github size={16} />
-                  {t("projects.githubRepo")} (NDA)
-                </span>
-              </div>
-            </motion.article>
+              <motion.article
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="flex h-full cursor-pointer flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6 transition-colors hover:border-slate-600"
+              >
+                <h3 className="mb-3 text-xl font-semibold text-white">
+                  {t(`projects.items.${project.key}.title`)}
+                </h3>
+                <p className="mb-4 flex-1 text-sm text-slate-400 leading-relaxed">
+                  {t(`projects.items.${project.key}.description`)}
+                </p>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded bg-slate-700/80 px-2 py-0.5 text-xs text-slate-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300">
+                  {t("projectDetail.viewDetails")}
+                  <ChevronRight size={16} />
+                </h4>
+              </motion.article>
+            </Link>
           ))}
         </div>
       </motion.div>

@@ -26,7 +26,7 @@ export function CaseStudyCard({
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6 transition-colors hover:border-slate-600"
+      className="flex h-full min-h-[220px] flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6 transition-colors hover:border-slate-600"
     >
       <h3 className="mb-3 text-xl font-semibold text-white">{caseStudy.title}</h3>
       <div className="mb-3 flex flex-wrap gap-2">
