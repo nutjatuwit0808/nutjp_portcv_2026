@@ -1,15 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { FileDown } from "lucide-react";
+import { Eye } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 import type { CredentialsData } from "@/types/portfolio";
 import credentialsData from "@/data/credentials.json";
+import { CredentialPreviewOverlay } from "./CredentialPreviewOverlay";
 
 const data = credentialsData as CredentialsData;
 
 export function Credentials() {
   const { t } = useLocale();
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewTitle, setPreviewTitle] = useState("");
 
   return (
     <section
@@ -26,13 +30,13 @@ export function Credentials() {
         <h2 className="mb-8 text-3xl font-bold text-white">
           {t("credentials.title")}
         </h2>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 md:items-stretch">
           {data.toeic && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
+              className="flex flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
             >
               <h3 className="mb-4 text-lg font-semibold text-blue-400">
                 {t("credentials.toeic")}
@@ -50,15 +54,19 @@ export function Credentials() {
                 </p>
               </div>
               {data.toeic.pdfUrl && (
-                <a
-                  href={data.toeic.pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300"
-                >
-                  <FileDown size={16} />
-                  {t("credentials.downloadPdf")}
-                </a>
+                <div className="mt-auto flex justify-center pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPreviewImage(data.toeic!.pdfUrl!);
+                      setPreviewTitle(t("credentials.toeic"));
+                    }}
+                    className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300"
+                  >
+                    <Eye size={16} />
+                    {t("credentials.preview")}
+                  </button>
+                </div>
               )}
             </motion.div>
           )}
@@ -68,7 +76,7 @@ export function Credentials() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
+              className="flex flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6"
             >
               <h3 className="mb-4 text-lg font-semibold text-blue-400">
                 {t("credentials.transcript")}
@@ -126,20 +134,31 @@ export function Credentials() {
                   </div>
                 )}
               {data.education.transcriptUrl && (
-                <a
-                  href={data.education.transcriptUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300"
-                >
-                  <FileDown size={16} />
-                  {t("credentials.downloadPdf")}
-                </a>
+                <div className="mt-auto flex justify-center pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPreviewImage(data.education!.transcriptUrl!);
+                      setPreviewTitle(t("credentials.transcript"));
+                    }}
+                    className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300"
+                  >
+                    <Eye size={16} />
+                    {t("credentials.preview")}
+                  </button>
+                </div>
               )}
             </motion.div>
           )}
         </div>
       </motion.div>
+
+      <CredentialPreviewOverlay
+        isOpen={!!previewImage}
+        onClose={() => setPreviewImage(null)}
+        imageUrl={previewImage ?? ""}
+        title={previewTitle}
+      />
     </section>
   );
 }

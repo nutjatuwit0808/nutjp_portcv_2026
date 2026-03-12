@@ -103,6 +103,7 @@
   },
   "credentials": {
     "title": "ใบรับรอง",
+    "preview": "ดูตัวอย่าง",
     "toeic": "คะแนน TOEIC",
     "transcript": "ใบแสดงผลการศึกษา",
     "downloadPdf": "ดาวน์โหลด PDF",

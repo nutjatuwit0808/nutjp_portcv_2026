@@ -103,6 +103,7 @@
   },
   "credentials": {
     "title": "Credentials",
+    "preview": "Preview",
     "toeic": "TOEIC Score",
     "transcript": "Academic Transcript",
     "downloadPdf": "Download PDF",
