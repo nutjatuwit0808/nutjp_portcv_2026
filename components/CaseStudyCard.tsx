@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Github } from "lucide-react";
+import { useLocale } from "@/context/LocaleContext";
 import type { CaseStudy } from "@/types/portfolio";
 import type { Locale } from "@/lib/i18n";
+import { Card } from "@/components/ui/Card";
+import { TechTag } from "@/components/ui/TechTag";
+import { useExpandable } from "@/hooks/useExpandable";
 
 interface CaseStudyCardProps {
   caseStudy: CaseStudy;
@@ -18,43 +21,47 @@ export function CaseStudyCard({
   githubUrl,
   viewOnGitHubLabel,
 }: CaseStudyCardProps) {
+  const { t } = useLocale();
   const description =
     locale === "th" ? caseStudy.descriptionTH : caseStudy.descriptionEN;
+  const { visibleItems, hasMore, hiddenCount, expanded, toggle } = useExpandable(
+    caseStudy.tech,
+    { initialCount: 5 }
+  );
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="flex h-full min-h-[220px] flex-col rounded-lg border border-slate-700/50 bg-slate-800/50 p-6 transition-colors hover:border-slate-600"
+    <Card
+      as="article"
+      hover
+      minHeight="min-h-[220px]"
+      className="transition-colors"
     >
       <h3 className="mb-3 text-xl font-semibold text-white">{caseStudy.title}</h3>
       <div className="mb-3 flex flex-wrap gap-2">
         {caseStudy.domain.map((d) => (
-          <span
-            key={d}
-            className="rounded bg-blue-500/20 px-2 py-0.5 text-xs text-blue-300"
-          >
+          <TechTag key={d} variant="domain">
             {d}
-          </span>
+          </TechTag>
         ))}
       </div>
-      <p className="mb-4 flex-1 line-clamp-3 text-sm text-slate-400 leading-relaxed">
+      <p className="mb-4 flex-1 line-clamp-3 text-sm leading-relaxed text-slate-400">
         {description}
       </p>
       <div className="mb-4 flex flex-wrap gap-2">
-        {caseStudy.tech.slice(0, 5).map((t) => (
-          <span
-            key={t}
-            className="rounded bg-slate-700/80 px-2 py-0.5 text-xs text-slate-300"
-          >
-            {t}
-          </span>
+        {visibleItems.map((tech) => (
+          <TechTag key={tech}>{tech}</TechTag>
         ))}
-        {caseStudy.tech.length > 5 && (
-          <span className="rounded bg-slate-700/80 px-2 py-0.5 text-xs text-slate-500">
-            +{caseStudy.tech.length - 5}
-          </span>
+        {hasMore && (
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={
+              expanded ? t("caseStudies.showLessTech") : t("caseStudies.viewMoreTech")
+            }
+            className="cursor-pointer rounded bg-slate-700/80 px-2 py-0.5 text-xs text-slate-500 transition-colors hover:bg-slate-600/80 hover:text-slate-300"
+          >
+            {expanded ? "−" : `+${hiddenCount}`}
+          </button>
         )}
       </div>
       <a
@@ -66,6 +73,6 @@ export function CaseStudyCard({
         <Github size={16} />
         {viewOnGitHubLabel}
       </a>
-    </motion.article>
+    </Card>
   );
 }

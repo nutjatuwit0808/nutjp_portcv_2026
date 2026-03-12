@@ -1,7 +1,13 @@
 "use client";
 
-export function TopProgressBar() {
-  const progress = 90;
+interface TopProgressBarProps {
+  /** ค่า 0–100 เมื่อ >= 100 จะซ่อน bar (ใช้ระหว่างพัฒนา) */
+  progress?: number;
+}
+
+/** แสดง progress bar ด้านบน - ซ่อนอัตโนมัติเมื่อ progress >= 100 */
+export function TopProgressBar({ progress = 100 }: TopProgressBarProps) {
+  if (progress >= 100) return null;
 
   return (
     <div className="fixed left-0 right-0 top-0 z-50 bg-slate-900/90 backdrop-blur-sm">

@@ -41,7 +41,9 @@
     "title": "ตัวอย่างงาน",
     "subtitle": "ผลงานจาก GitHub — สถาปัตยกรรมและโซลูชันที่ออกแบบและพัฒนาขึ้น",
     "viewOnGitHub": "ดูบน GitHub",
-    "featured": "Featured"
+    "featured": "Featured",
+    "viewMoreTech": "ดู tech stack เพิ่ม",
+    "showLessTech": "ย่อ"
   },
   "projects": {
     "title": "โปรเจกต์จากงานจริง",
@@ -65,38 +67,39 @@
   },
   "experience": {
     "title": "ประสบการณ์การทำงาน",
-    "location": "Bangkok, Thailand",
     "items": {
       "bedrock": {
         "role": "Senior Full Stack Developer (Outsource)",
         "period": "Dec 2024 - Present",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "ออกแบบ No-Code Map Platform ด้วย Mapbox พร้อม geospatial management interface ที่ยืดหยุ่น",
-          "ลดเวลา API response ลง 85% (8,000ms → 1,200ms) ด้วย k6 load testing และ refactor .geojson"
+          "ออกแบบ No-Code Map Platform: พัฒนา geospatial management interface ที่ยืดหยุ่นด้วย Mapbox Refactor core codebase ให้ผู้ใช้ปรับแต่ง interactive map widgets (เช่น filters, legends) ได้ผ่าน No-code architecture",
+          "Performance Optimization: ลดเวลา API response ลง 85% (จาก 8,000ms เป็น 1,200ms) ด้วย k6 load testing และ refactor data-fetching logic"
         ]
       },
       "avalant_senior": {
         "role": "Senior Full Stack Developer",
         "period": "Jan 2021 - Nov 2024",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "ที่ปรึกษาทางเทคนิคหลักสำหรับองค์กรลูกค้า (SCG) ด้านระบบ scalability",
-          "ให้คำแนะนำ junior developer 2 คนผ่าน code reviews และทิศทางทางเทคนิค"
+          "เป็นที่ปรึกษาทางเทคนิคหลักสำหรับองค์กรลูกค้า (SCG) ให้คำแนะนำ stakeholders ด้านระบบ scalability และการบูรณาการฟีเจอร์ใหม่",
+          "ให้คำแนะนำและพัฒนาศักยภาพ junior developer 2 คน ผ่าน code reviews ทิศทางทางเทคนิค และสนับสนุนการแก้ปัญหา blockers ที่ซับซ้อน"
         ]
       },
       "avalant_full": {
         "role": "Full Stack Developer",
         "period": "Dec 2019 - Jan 2021",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "นำหน้าสถาปัตยกรรม frontend สำหรับ Zero (No-code) และ PromptX (AI-driven interface)",
-          "สร้าง UI ที่ scale ได้ด้วย React.js และ TypeScript"
+          "วางโครงสร้างสำหรับ frontend สำหรับแพลตฟอร์ม Zero (No-code) และ PromptX (AI-driven interface) ด้วย React.js และ TypeScript เพื่อสร้าง UI ที่ scale ได้และมีปฏิสัมพันธ์สูง"
         ]
       },
       "godygo": {
         "role": "Java Developer",
         "period": "Aug 2018 - Feb 2019",
+        "location": "Songkhla, Thailand",
         "highlights": [
-          "พัฒนาและดูแล backend infrastructure สำหรับแอปโลจิสติกส์ Godygo",
-          "สร้าง APIs ที่เชื่อถือได้สำหรับ Android mobile interface"
+          "พัฒนาและดูแล backend infrastructure สำหรับแอปโลจิสติกส์ Godygo สร้าง APIs ที่เชื่อถือได้สำหรับ Android mobile interface"
         ]
       }
     }

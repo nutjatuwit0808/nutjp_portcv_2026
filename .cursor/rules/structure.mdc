@@ -1,0 +1,29 @@
+# โครงสร้างโปรเจกต์ nutjp_portcv_2026
+
+## โฟลเดอร์หลัก
+
+| โฟลเดอร์ | หน้าที่ |
+|-----------|---------|
+| `app/` | Routes, layout, API |
+| `components/` | UI components |
+| `components/ui/` | Reusable UI primitives (Section, Card, TechTag) |
+| `lib/` | Utilities, clients, motion config |
+| `hooks/` | Reusable logic (useExpandable, etc.) |
+| `context/` | React context (LocaleContext) |
+| `types/` | TypeScript interfaces |
+| `data/` | JSON data (credentials, case-studies) |
+| `locales/` | i18n translations (en.json, th.json) |
+
+## Path alias
+
+- `@/` → root ของโปรเจกต์
+
+## Helper ที่ใช้ซ้ำ
+
+- `lib/motion.ts` — animation variants (fadeInUp, fadeInUpSmall)
+- `lib/scroll-utils.ts` — scrollToSection, useScrollSpy
+- `lib/i18n.ts` — locale types
+- `components/ui/Section.tsx` — section wrapper พร้อม fade-in
+- `components/ui/Card.tsx` — card wrapper พร้อม border/bg
+- `components/ui/TechTag.tsx` — tech/skill tag
+- `hooks/useExpandable.ts` — expand/collapse logic

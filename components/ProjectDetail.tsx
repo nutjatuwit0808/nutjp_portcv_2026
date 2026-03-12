@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Star } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
+import { CardStatic } from "@/components/ui/Card";
+import { TechTag } from "@/components/ui/TechTag";
 import type { ProjectDetail as ProjectDetailType } from "@/types/portfolio";
 
 interface ProjectDetailProps {
@@ -52,35 +54,32 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
         >
           <h1 className="text-3xl font-bold text-white">{title}</h1>
 
-          <section className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6">
+          <CardStatic as="section">
             <h2 className="mb-4 text-lg font-semibold text-blue-400">
               {t("projectDetail.overview")}
             </h2>
             <BulletList items={overview} />
-          </section>
+          </CardStatic>
 
-          <section className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6">
+          <CardStatic as="section">
             <h2 className="mb-4 text-lg font-semibold text-blue-400">
               {t("projectDetail.role")}
             </h2>
             <BulletList items={roleResponsibilities} />
-          </section>
+          </CardStatic>
 
-          <section className="rounded-lg border border-slate-700/50 bg-slate-800/50 p-6">
+          <CardStatic as="section">
             <h2 className="mb-4 text-lg font-semibold text-blue-400">
               {t("projectDetail.techStack")}
             </h2>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-slate-700/80 px-3 py-1 text-sm text-slate-200"
-                >
+                <TechTag key={tech} variant="pill">
                   {tech}
-                </span>
+                </TechTag>
               ))}
             </div>
-          </section>
+          </CardStatic>
 
           <section className="rounded-lg border-2 border-blue-500/30 bg-slate-800/50 p-6">
             <div className="mb-4 flex items-center gap-2">

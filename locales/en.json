@@ -41,7 +41,9 @@
     "title": "Case Studies",
     "subtitle": "Engineering showcase from GitHub — architectures and solutions I've designed and built",
     "viewOnGitHub": "View on GitHub",
-    "featured": "Featured"
+    "featured": "Featured",
+    "viewMoreTech": "View more tech",
+    "showLessTech": "Show less"
   },
   "projects": {
     "title": "Work Experience Projects",
@@ -65,38 +67,39 @@
   },
   "experience": {
     "title": "Professional Experience",
-    "location": "Bangkok, Thailand",
     "items": {
       "bedrock": {
         "role": "Senior Full Stack Developer (Outsource)",
         "period": "Dec 2024 - Present",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "Architected No-Code Map Platform using Mapbox with flexible geospatial management interface",
-          "Reduced API response time by 85% (8,000ms → 1,200ms) via k6 load testing and .geojson refactoring"
+          "Architected No-Code Map Platform: Developed a highly flexible geospatial management interface using Mapbox. Refactored the core codebase to allow users to seamlessly customize interactive map widgets (e.g., filters, legends) via a No-code architecture.",
+          "Performance Optimization: Reduced API response time by 85% (from 8,000ms to 1,200ms) by conducting k6 load testing and refactoring data-fetching logic."
         ]
       },
       "avalant_senior": {
         "role": "Senior Full Stack Developer",
         "period": "Jan 2021 - Nov 2024",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "Primary technical consultant for enterprise client (SCG) on system scalability",
-          "Mentored 2 junior developers with code reviews and technical direction"
+          "Served as the primary technical consultant for enterprise-level client (SCG), advising stakeholders on system scalability and the integration of new features.",
+          "Mentored and guided 2 junior developers, elevating team performance through regular code reviews, technical direction, and hands-on support in resolving complex blockers."
         ]
       },
       "avalant_full": {
         "role": "Full Stack Developer",
         "period": "Dec 2019 - Jan 2021",
+        "location": "Bangkok, Thailand",
         "highlights": [
-          "Spearheaded frontend architecture for Zero (No-code) and PromptX (AI-driven interface)",
-          "Built scalable UIs with React.js and TypeScript"
+          "Spearheaded the frontend architecture for proprietary platforms, including Zero (No-code) and PromptX (AI-driven interface), leveraging React.js and TypeScript to build scalable and highly interactive user interfaces."
         ]
       },
       "godygo": {
         "role": "Java Developer",
         "period": "Aug 2018 - Feb 2019",
+        "location": "Songkhla, Thailand",
         "highlights": [
-          "Developed and maintained backend infrastructure for Godygo logistics app",
-          "Built reliable APIs for Android mobile interface"
+          "Developed and maintained the backend infrastructure for the Godygo logistics app, building reliable APIs to power the Android mobile interface."
         ]
       }
     }

@@ -62,15 +62,6 @@ export function Hero() {
             <Github size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/jatuwit"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full p-2 text-slate-400 transition-colors hover:text-white"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={24} />
-          </a>
-          <a
             href="mailto:nutjatuwit.dev@gmail.com"
             className="rounded-full p-2 text-slate-400 transition-colors hover:text-white"
             aria-label="Email"
