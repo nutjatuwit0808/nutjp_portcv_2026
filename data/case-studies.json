@@ -2,59 +2,15 @@
   "repoBaseUrl": "https://github.com/nutjatuwit0808/nutjatuwit_case_studies/tree/master",
   "items": [
     {
-      "id": "geospatial-comparison",
-      "title": "Geospatial Comparison",
-      "domain": ["GIS", "Geospatial Web Performance"],
-      "descriptionTH": "เปรียบเทียบ performance การโหลดแผนที่ระหว่าง GeoJSON และ PMTiles บน Mapbox GL JS แบบ side-by-side พร้อม metrics (load time, file size, time to first paint) และการประมาณเวลาโหลดตามความเร็วเครือข่าย (3G/4G/WiFi)",
-      "descriptionEN": "Side-by-side comparison of map loading performance between GeoJSON and PMTiles on Mapbox GL JS with metrics (load time, file size, time to first paint) and network speed simulation (3G/4G/WiFi).",
-      "tech": ["Next.js 16", "React 19", "Mapbox GL JS", "mapbox-pmtiles", "Tailwind CSS 4", "GeoJSON", "PMTiles"],
-      "folder": "geospatial-comparison",
+      "id": "ai-nl2sql-lite",
+      "title": "NL2SQL-Lite: Text-to-SQL with Guardrail",
+      "domain": ["AI", "NLP", "Database", "Text-to-SQL"],
+      "descriptionTH": "ระบบ Text-to-SQL รองรับสองภาษา (ไทย/อังกฤษ) LoRA fine-tune บน Apple Silicon (M2 Pro) พร้อม SQL injection guardrail (sqlparse) และ read-only database pipeline: Context Injection → LLM → Guardrail → Execute → Self-Correction",
+      "descriptionEN": "Bilingual (Thai/English) Text-to-SQL system with LoRA fine-tuning on Apple Silicon (M2 Pro), SQL injection guardrail (sqlparse), and read-only pipeline: Context Injection → LLM → Guardrail → Execute → Self-Correction.",
+      "tech": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Python", "FastAPI", "MLX", "mlx-lm", "psycopg2", "sqlparse", "Pydantic", "Hugging Face", "PostgreSQL", "Supabase"],
+      "folder": "ai-nl2sql-lite",
       "featured": true,
       "order": 1
-    },
-    {
-      "id": "geospatial-data-pipeline",
-      "title": "Geospatial Data Pipeline",
-      "domain": ["GIS", "Data Pipeline"],
-      "descriptionTH": "Pipeline สำหรับสร้างข้อมูลอสังหาริมทรัพย์จำลอง 100,000 จุดทั่วประเทศไทย และแปลง GeoJSON เป็น PMTiles ด้วย tippecanoe เพื่อใช้ร่วมกับ geospatial-comparison",
-      "descriptionEN": "Pipeline to generate 100,000 simulated real estate points across Thailand and convert GeoJSON to PMTiles using tippecanoe for use with geospatial-comparison.",
-      "tech": ["Python", "GeoPandas", "pandas", "numpy", "pyarrow", "tippecanoe", "GeoJSON", "PMTiles"],
-      "folder": "geospatial-data-pipeline",
-      "featured": false,
-      "order": 2
-    },
-    {
-      "id": "geospatial-search-rag",
-      "title": "Geospatial Search RAG",
-      "domain": ["GIS", "AI", "RAG"],
-      "descriptionTH": "ระบบค้นหาสถานที่ด้วย Semantic Search และ RAG ใช้ PostgreSQL + PostGIS + pgvector บน Supabase ร่วมกับ Google Gemini และ Mapbox Geocoding",
-      "descriptionEN": "Place search system with Semantic Search and RAG using PostgreSQL + PostGIS + pgvector on Supabase with Google Gemini and Mapbox Geocoding.",
-      "tech": ["Next.js 16", "React 19", "Mapbox GL JS", "Supabase", "PostGIS", "pgvector", "Google Gemini", "Tailwind CSS"],
-      "folder": "geospatial-search-rag",
-      "featured": true,
-      "order": 3
-    },
-    {
-      "id": "geospatial-realtime-anomaly-detection",
-      "title": "Geo-Stream: Real-time Anomaly Detection",
-      "domain": ["GIS", "Event-Driven", "AI", "Real-time"],
-      "descriptionTH": "ระบบตรวจจับความผิดปกติของพิกัด GPS รถบรรทุกแบบ Real-time ด้วย Event-Driven Architecture (Kafka, Python AI, NestJS, Next.js + Mapbox)",
-      "descriptionEN": "Real-time GPS coordinate anomaly detection for trucks using Event-Driven Architecture (Kafka, Python AI, NestJS, Next.js + Mapbox).",
-      "tech": ["Python", "Apache Kafka", "scikit-learn", "NestJS", "Next.js 16", "Mapbox GL JS", "Socket.IO"],
-      "folder": "geospatial-realtime-anomaly-detection",
-      "featured": false,
-      "order": 4
-    },
-    {
-      "id": "geospatial-realtime-fleet-telematics",
-      "title": "Fleet MVT: Dynamic MVT Engine for Fleet Telematics",
-      "domain": ["GIS", "Real-time", "Vector Tiles"],
-      "descriptionTH": "จำลองและแสดงผลยานพาหนะ 1,000 คันบนแผนที่แบบ Real-time ด้วย Spatial Interpolation คำนวณตำแหน่ง On-the-fly เสิร์ฟเป็น MVT (ไม่ Update DB)",
-      "descriptionEN": "Simulate and display 1,000 vehicles on map in real-time with Spatial Interpolation, computing positions on-the-fly and serving as MVT (no DB updates).",
-      "tech": ["Supabase", "PostgreSQL", "PostGIS", "Upstash Redis", "NestJS", "Next.js 16", "Mapbox GL JS"],
-      "folder": "geospatial-realtime-fleet-telematics",
-      "featured": false,
-      "order": 5
     },
     {
       "id": "ai-typhoon-multi-agent",
@@ -65,17 +21,61 @@
       "tech": ["NestJS", "Next.js", "LangChain", "Ollama", "Typhoon API", "Google Gemini Embeddings", "Supabase", "pgvector", "Zustand", "Chart.js", "Zod", "Tailwind CSS"],
       "folder": "ai-typhoon-multi-agent",
       "featured": true,
+      "order": 2
+    },
+    {
+      "id": "geospatial-comparison",
+      "title": "Geospatial Comparison",
+      "domain": ["GIS", "Geospatial Web Performance"],
+      "descriptionTH": "เปรียบเทียบ performance การโหลดแผนที่ระหว่าง GeoJSON และ PMTiles บน Mapbox GL JS แบบ side-by-side พร้อม metrics (load time, file size, time to first paint) และการประมาณเวลาโหลดตามความเร็วเครือข่าย (3G/4G/WiFi)",
+      "descriptionEN": "Side-by-side comparison of map loading performance between GeoJSON and PMTiles on Mapbox GL JS with metrics (load time, file size, time to first paint) and network speed simulation (3G/4G/WiFi).",
+      "tech": ["Next.js 16", "React 19", "Mapbox GL JS", "mapbox-pmtiles", "Tailwind CSS 4", "GeoJSON", "PMTiles"],
+      "folder": "geospatial-comparison",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": "geospatial-data-pipeline",
+      "title": "Geospatial Data Pipeline",
+      "domain": ["GIS", "Data Pipeline"],
+      "descriptionTH": "Pipeline สำหรับสร้างข้อมูลอสังหาริมทรัพย์จำลอง 100,000 จุดทั่วประเทศไทย และแปลง GeoJSON เป็น PMTiles ด้วย tippecanoe เพื่อใช้ร่วมกับ geospatial-comparison",
+      "descriptionEN": "Pipeline to generate 100,000 simulated real estate points across Thailand and convert GeoJSON to PMTiles using tippecanoe for use with geospatial-comparison.",
+      "tech": ["Python", "GeoPandas", "pandas", "numpy", "pyarrow", "tippecanoe", "GeoJSON", "PMTiles"],
+      "folder": "geospatial-data-pipeline",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "geospatial-search-rag",
+      "title": "Geospatial Search RAG",
+      "domain": ["GIS", "AI", "RAG"],
+      "descriptionTH": "ระบบค้นหาสถานที่ด้วย Semantic Search และ RAG ใช้ PostgreSQL + PostGIS + pgvector บน Supabase ร่วมกับ Google Gemini และ Mapbox Geocoding",
+      "descriptionEN": "Place search system with Semantic Search and RAG using PostgreSQL + PostGIS + pgvector on Supabase with Google Gemini and Mapbox Geocoding.",
+      "tech": ["Next.js 16", "React 19", "Mapbox GL JS", "Supabase", "PostGIS", "pgvector", "Google Gemini", "Tailwind CSS"],
+      "folder": "geospatial-search-rag",
+      "featured": true,
+      "order": 5
+    },
+    {
+      "id": "geospatial-realtime-anomaly-detection",
+      "title": "Geo-Stream: Real-time Anomaly Detection",
+      "domain": ["GIS", "Event-Driven", "AI", "Real-time"],
+      "descriptionTH": "ระบบตรวจจับความผิดปกติของพิกัด GPS รถบรรทุกแบบ Real-time ด้วย Event-Driven Architecture (Kafka, Python AI, NestJS, Next.js + Mapbox)",
+      "descriptionEN": "Real-time GPS coordinate anomaly detection for trucks using Event-Driven Architecture (Kafka, Python AI, NestJS, Next.js + Mapbox).",
+      "tech": ["Python", "Apache Kafka", "scikit-learn", "NestJS", "Next.js 16", "Mapbox GL JS", "Socket.IO"],
+      "folder": "geospatial-realtime-anomaly-detection",
+      "featured": true,
       "order": 6
     },
     {
-      "id": "ai-nl2sql-lite",
-      "title": "NL2SQL-Lite: Text-to-SQL with Guardrail",
-      "domain": ["AI", "NLP", "Database", "Text-to-SQL"],
-      "descriptionTH": "ระบบ Text-to-SQL รองรับสองภาษา (ไทย/อังกฤษ) LoRA fine-tune บน Apple Silicon (M2 Pro) พร้อม SQL injection guardrail (sqlparse) และ read-only database pipeline: Context Injection → LLM → Guardrail → Execute → Self-Correction",
-      "descriptionEN": "Bilingual (Thai/English) Text-to-SQL system with LoRA fine-tuning on Apple Silicon (M2 Pro), SQL injection guardrail (sqlparse), and read-only pipeline: Context Injection → LLM → Guardrail → Execute → Self-Correction.",
-      "tech": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Python", "FastAPI", "MLX", "mlx-lm", "psycopg2", "sqlparse", "Pydantic", "Hugging Face", "PostgreSQL", "Supabase"],
-      "folder": "ai-nl2sql-lite",
-      "featured": false,
+      "id": "geospatial-realtime-fleet-telematics",
+      "title": "Fleet MVT: Dynamic MVT Engine for Fleet Telematics",
+      "domain": ["GIS", "Real-time", "Vector Tiles"],
+      "descriptionTH": "จำลองและแสดงผลยานพาหนะ 1,000 คันบนแผนที่แบบ Real-time ด้วย Spatial Interpolation คำนวณตำแหน่ง On-the-fly เสิร์ฟเป็น MVT (ไม่ Update DB)",
+      "descriptionEN": "Simulate and display 1,000 vehicles on map in real-time with Spatial Interpolation, computing positions on-the-fly and serving as MVT (no DB updates).",
+      "tech": ["Supabase", "PostgreSQL", "PostGIS", "Upstash Redis", "NestJS", "Next.js 16", "Mapbox GL JS"],
+      "folder": "geospatial-realtime-fleet-telematics",
+      "featured": true,
       "order": 7
     }
   ]
